@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="634.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.UpdateCustomerScreenController">
+   <children>
+      <AnchorPane layoutX="18.0" layoutY="18.0" prefHeight="599.0" prefWidth="562.0" style="-fx-border-color: black; -fx-border-radius: 10;">
+         <children>
+            <Label layoutX="219.0" layoutY="41.0" text="Update Customer">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <HBox alignment="TOP_CENTER" layoutX="64.0" layoutY="107.0" prefHeight="220.0" prefWidth="422.0" spacing="15.0">
+               <children>
+                  <VBox prefHeight="223.0" prefWidth="100.0" spacing="20.0">
+                     <children>
+                        <Label text="Customer ID:" />
+                        <Label text="Name:" />
+                        <Label text="Address" />
+                        <Label text="Postal Code:" />
+                        <Label text="Phone Number:" />
+                        <Label text="Country" />
+                        <Label text="State/Province" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="230.0" prefWidth="203.0" spacing="10.0">
+                     <children>
+                        <TextField fx:id="customerIdField" alignment="CENTER_RIGHT" disable="true" />
+                        <TextField fx:id="nameField" alignment="CENTER_RIGHT" promptText="Customer Full Name" />
+                        <TextField fx:id="addressField" alignment="CENTER_RIGHT" promptText="Street Address" />
+                        <TextField fx:id="postalField" alignment="CENTER_RIGHT" promptText="Postal/Zip Code" />
+                        <TextField fx:id="phoneField" alignment="CENTER_RIGHT" promptText="Phone Number" />
+                        <ComboBox fx:id="countryField" onAction="#countryChangedHandler" prefHeight="26.0" prefWidth="203.0" />
+                        <ComboBox fx:id="divisionField" prefHeight="26.0" prefWidth="203.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Button layoutX="301.0" layoutY="378.0" mnemonicParsing="false" onAction="#saveButtonHandler" prefHeight="26.0" prefWidth="51.0" text="Save" />
+            <Button layoutX="382.0" layoutY="378.0" mnemonicParsing="false" onAction="#cancelButtonHandler" text="Cancel" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="errorTextField" alignment="CENTER" contentDisplay="TOP" layoutX="122.0" layoutY="485.0" prefHeight="18.0" prefWidth="331.0" />
+   </children>
+</AnchorPane>
