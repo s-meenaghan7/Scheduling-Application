@@ -1,9 +1,9 @@
 # Scheduling-Application
 Timekeeping / appointment scheduling application written in Java.
 
-IDE: Apache Netbeans v12.3
-Java version "11.0.10" 2021-01-19 LTS
-JavaFX API of version 15.0.1 by JavaFX runtime of version 11.0.2
+IDE: Apache Netbeans v12.3\n
+Java version "11.0.10" 2021-01-19 LTS\n
+JavaFX API of version 15.0.1 by JavaFX runtime of version 11.0.2\n
 MySQL Connector Driver version: 8.0.22
 
 This Java application is used to keep track of customer information and their appointments for a company. The application connects to a MySQL database to retrieve relevant data regarding customer and appointment information. User login data (credentials) is also held in the database. Data access objects are responsible for performing CRUD operations on the database's tables to retrieve, add, update, and delete information used in the application.
