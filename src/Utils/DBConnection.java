@@ -12,12 +12,13 @@ import java.sql.SQLException;
 public class DBConnection {
     
     // JDBC URL parts
+    // NOTE: Host and database information has been removed from this public file, for security.
     private static final String PROTOCOL = "jdbc";
     private static final String VENDOR = ":mysql:";
-    private static final String HOST = "//wgudb.ucertify.com:3306/";
-    private static final String DATABASE = "WJ06FWN";
+    private static final String HOST;
+    private static final String DATABASE;
     
-    // JDBC URL: jdbc:mysql://wgudb.ucertify.com/WJ06FWN + ?autoReconnect=true
+    // Full JDBC URL format
     private static final String JDBCURL = PROTOCOL + VENDOR + HOST + DATABASE + "?autoReconnect=true";
     
     // Driver and connection interface references
@@ -25,8 +26,9 @@ public class DBConnection {
     private static Connection conn = null;
     
     // DB username & password
-    private static final String USERNAME = "U06FWN";
-    private static final String PASSWORD = "53688749476";
+    // NOTE: Username and password are sensitive information and as such have been removed from this public file.
+    private static final String USERNAME;
+    private static final String PASSWORD;
     
     public static Connection startConnection() {
         try {
